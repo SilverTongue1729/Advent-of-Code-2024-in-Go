@@ -40,14 +40,20 @@ func main() {
 	}
 	ans := 0
 	
+	vis := make([][]int, n)
+	for i:=0; i<n; i++ {
+		vis[i] = make([]int, m)
+	}
+	
 	for i:=0; i<n; i++ {
 		for j:=0; j<m; j++ {
 			if grid[i][j] != '.' { continue }
 			grid[i][j] = '#'
 			
-			vis := make([][]int, n)
 			for i:=0; i<n; i++ {
-				vis[i] = make([]int, m)
+				for j:=0; j<m; j++ {
+					vis[i][j] = 0
+				}
 			}
 			
 			flag := false
