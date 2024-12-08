@@ -65,7 +65,7 @@ func main() {
 				x /= g
 				y /= g
 				
-				for k:=1; ; k++ {
+				for k:=0; ; k++ {
 					nx, ny := posi.x + k*x, posi.y + k*y
 					if nx < 0 || nx >= len(grid) || ny < 0 || ny >= len(grid[0]) { break }
 					vis[nx][ny] = true
